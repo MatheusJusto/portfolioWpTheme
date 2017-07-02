@@ -1,0 +1,44 @@
+@mixin titulos()
+    text-align: center
+    color: #000
+    margin-bottom: 100px
+    font-size: 35px
+    font-weight: bolder
+    +breakpoint($celular)
+        font-size: 25px
+    +breakpoint($phablet)
+        font-size: 30px
+
+.header-top
+    min-height: 335px
+    margin: 0 0 25px
+    background:
+        image: url(../img/background-header-contato.jpg)
+        position: center center
+        repeat: no-repeat
+        color: #ccc
+        size: cover
+        attachment: fixed
+        padding-top: 20px
+    +breakpoint($celular)
+        height: 150px
+    +breakpoint($phablet)
+        height: 300px
+
+    h2
+            @include titulos()
+            margin-top: 150px 
+            color: #fff
+
+section.contato
+    background-color: #fff
+    form
+        +make-row
+        +clearfix
+        .col
+            +make-sm-column(6)
+        .collg
+            +make-sm-column(12)
+
+.bg-success, .bg-danger
+    padding: 5px

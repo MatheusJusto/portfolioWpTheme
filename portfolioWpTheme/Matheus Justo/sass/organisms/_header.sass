@@ -1,0 +1,157 @@
+.mouse
+    width: 30px
+    height: 45px
+    display: block
+    position: relative
+    bottom: -25px
+    left: 47%
+    border: 2px solid #000
+    border-radius: 30px
+    background: transparent
+    
+    .wheel
+      display: block
+      position: absolute
+      top: 10px
+      left: 50%
+      width: 4px
+      height: 4px
+      margin: 0 0 0 -2px
+      background: #000
+      border-radius: 50%
+      animation: scrolling 1.8s linear 0s infinite normal none
+
+@keyframes scrolling
+  0%
+    transform: translate3d(0,0,0)
+    opacity: 1
+  
+  1%
+    transform: translate3d(0,5px,0)
+    opacity: 1
+  
+  10%
+    transform: translate3d(0,10px,0)
+    opacity: 0
+  
+  15%
+    transform: translate3d(0,15,0)
+    opacity: 0
+  
+  70%
+    transform: translate3d(0, 20, 0)
+    opacity: 0
+
+.bg-header
+    position: fixed
+    width: 100%
+    height: 100%
+    background: 
+        image: url('../img/backgroundheader.png')
+        position: top center
+        repeat: no-repeat
+        size: cover
+        color: #ccc
+    z-index: -1
+    
+.header-top
+    +clearfix
+    height: 90%
+    +breakpoint($celular)
+        padding: 5px 0
+        min-height: 570px
+    +breakpoint($phablet)
+        padding: 5px 0
+    +breakpoint($tablet)
+        padding: 5px 0
+    .logo
+        display: block
+        float: left
+        img
+            +breakpoint($celular)
+                width: 80px
+
+    .links
+        float: right
+        padding-top: 10px
+        
+
+        nav, .social
+            display: inline-block
+
+        nav
+            +breakpoint($celular)
+                display: none
+            +breakpoint($phablet)
+                display: none
+            ul
+                list-style: none
+            li
+                display: inline-block
+                margin-right: 20px
+                +breakpoint($tablet)
+                    margin-right: 10px
+                a
+                    text-decoration: none
+                    text-transform: uppercase
+                    color: #fff
+                    &:hover
+                        text-decoration: underline
+        .social
+            list-style: none
+            +breakpoint($celular)
+                display: none
+            +breakpoint($phablet)
+                padding-top: 5px
+            +breakpoint($tablet)
+                padding-top: 5px
+            li
+                display: inline-block
+                a
+                    color: #fff
+                    i
+                        font-size: 24px
+                        margin: 0 5px
+    .slide
+        .slick-list
+            clear: both
+                
+
+    h2
+        color: #fff
+        clear: both
+        margin: 250px 0 0
+        font-weight: bolder
+        text-align: center
+        font-size: 36px
+        text-shadow: -1px 1px 0px 0.9px #000
+        +breakpoint($celular)
+            margin: 150px 0 0
+            font-size: 20px
+        +breakpoint($phablet)
+            margin: 170px 0 0
+            font-size: 26px
+        +breakpoint($tablet)
+            margin: 170px 0 0
+            font-size: 33px
+        
+    p
+        margin-top: 15px
+        margin-bottom: 180px
+        color: #fff
+        text-align: center
+        font-size: 22px
+        font-family: 'Open Sans', sans-serif
+        font-weight: lighter
+        border-shadow: 1px 1px 1px #000
+        +breakpoint($celular)
+            font-size: 10px
+            margin-bottom: 120px
+        +breakpoint($phablet)
+            font-size: 14px
+        +breakpoint($tablet)
+            font-size: 18px
+    
+main
+    background: #fff
+    padding: 70px 0 0 
